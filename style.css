@@ -41,3 +41,20 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+.content h4{
+    display: flex;
+    align-items: center;
+}
+
+.content .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 92%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
