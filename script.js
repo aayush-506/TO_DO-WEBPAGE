@@ -1,3 +1,21 @@
+// let ai= document.getElementsByClassName("accordion")
+// ai.addEventListener("click",function(){
+//   document.getElementsByClassName("accordion").innerHTML =
+// })
+
+// document.getElementById("acc0").addEventListener("click", function() {
+//   document.getElementById("acc0").innerHTML = ` <h4> <input type="checkbox">Today Tasks:</h5>`;
+// });
+
+
+
+
+
+
+
+
+
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -16,3 +34,8 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+document.getElementById("acc0").addEventListener("click", function() {
+  document.getElementById("acc0").innerHTML = ` <h4> <input type="checkbox">Today Tasks:</h5>`;
+});

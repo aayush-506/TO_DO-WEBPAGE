@@ -35,6 +35,7 @@ body{
     height: 5vh;
     width: 3vw;
     margin-right: 2vw;
+    cursor: pointer;
 }
 .content h2{
     display: flex;
@@ -56,5 +57,17 @@ body{
     border: none;
     outline: none;
     transition: 0.4s;
+  }
+
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    width: 82.6%;
   }
   
