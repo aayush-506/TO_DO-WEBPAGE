@@ -45,6 +45,7 @@ body{
 .content h4{
     display: flex;
     align-items: center;
+    margin: 0;
 }
 
 .content .accordion {
