@@ -93,7 +93,7 @@ body{
     color: white;
 }
 
-#inline{
+.inline{
     background-color: #282828;
     display: flex;
 }
@@ -129,7 +129,7 @@ body{
     font-weight: 14px;
 }
 
-#enterTasks{
+.enterTasks{
     flex: 1;
     border: none;
     outline: none;
@@ -321,7 +321,7 @@ ul li.checked{
         align-content: center;
     }
     
-    #new_task_input {
+    .new_task_input {
         min-width: 250px;
         margin-bottom: 0;
         font-size: 20px;
@@ -332,13 +332,13 @@ ul li.checked{
         border-bottom: 1px rgba(255, 255, 255, 0.267) solid;
     }
     
-    #new_task_input::placeholder {
+    .new_task_input::placeholder {
         color: rgba(255, 255, 255, 0.589);
         font-size: 20px;
         font-family: "Times New Roman";
     }
     
-     #new_task_input_btn {
+     .new_task_input_btn {
         width: 30px;
         height: 30px;
         background-color: transparent;
@@ -350,6 +350,13 @@ ul li.checked{
         margin-top: 10px;
     }
 
-    #new_task_input {
+    .new_task_input {
       margin-right: 20px;
   }
+
+  .task-item 
+  { margin: 5px 0;
+     display: flex;
+      align-items: center;
+     }
+  
