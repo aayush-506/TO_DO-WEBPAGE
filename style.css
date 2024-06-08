@@ -23,7 +23,7 @@ body{
 .content{
     height: auto;
     width: 30vw;
-    background-color: blue;
+    background-color: #282828;
     margin-top: 20vh;
     margin-right: 10vw;
     
@@ -31,16 +31,21 @@ body{
 .items{
     margin-left: 2vw;
 }
+/* button{
+  color: white;
+} */
+
 .content img{
     height: 5vh;
     width: 3vw;
     margin-right: 2vw;
     cursor: pointer;
 }
-.content h2{
+.content .items h2{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: white;
 }
 .content h4{
     display: flex;
@@ -49,7 +54,7 @@ body{
 }
 
 .content .accordion {
-    background-color: #eee;
+    background-color:  #282828;
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -58,26 +63,52 @@ body{
     border: none;
     outline: none;
     transition: 0.4s;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
   }
 
   .active, .accordion:hover {
     background-color: #ccc;
+    color: #282828;/*----------------- */
   }
   
   .panel {
     padding: 0 18px;
-    background-color: white;
+    background-color:  #282828;
     display: none;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
     overflow: hidden;
     width: 82.6%;
   }
+
   ul li{
-    list-style: none;
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
+    list-style:none;
+    font-size: 22px;
+    padding: 12px 8px 12px 10px;
     user-select: none;
     cursor: pointer;
+    position: relative;
+    color: white;
 }
+
+#inline{
+    background-color: #282828;
+    display: flex;
+}
+
+
+
+.bullet-icon{
+    height: 24px;
+    width: 4px;
+    margin-left: 17px;
+    margin-top: 13px;
+    background-color: red;
+    border-radius: 35px;
+}
+
 .row{
     display: flex;
     align-content: center;
@@ -89,13 +120,23 @@ body{
     margin-right:40px ;
     margin-bottom: 25px;
 }
-#search{
+#enterDate{
     flex: 1;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
     font-weight: 14px;
+}
+
+#enterTasks{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    
 }
  #Add{
     display: flex;
@@ -111,3 +152,204 @@ body{
     border-radius: 30px;
     
 }
+
+ul li.checked{
+  color: #555;
+  text-decoration:line-through ;
+}
+
+
+
+                    /* <-----------SLIDERSECTION---------------> */
+ .switch {
+        /* switch */
+        --switch-width: 46px;
+        --switch-height: 24px;
+        --switch-bg: rgb(89, 125, 243);
+        --switch-checked-bg: rgb(0, 218, 80);
+        --switch-offset: calc(
+          (var(--switch-height) - var(--circle-diameter)) / 2
+        );
+        --switch-transition: all 0.2s cubic-bezier(0.27, 0.2, 0.25, 1.51);
+        /* circle */
+        --circle-diameter: 18px;
+        --circle-bg: #fff;
+        --circle-shadow: 1px 1px 2px rgba(146, 146, 146, 0.45);
+        --circle-checked-shadow: -1px 1px 2px rgba(163, 163, 163, 0.45);
+        --circle-transition: var(--switch-transition);
+        /* icon */
+        --icon-transition: all 0.2s cubic-bezier(0.27, 0.2, 0.25, 1.51);
+        --icon-cross-color: var(--switch-bg);
+        --icon-cross-size: 6px;
+        --icon-checkmark-color: var(--switch-checked-bg);
+        --icon-checkmark-size: 10px;
+        /* effect line */
+        --effect-width: calc(var(--circle-diameter) / 2);
+        --effect-height: calc(var(--effect-width) / 2 - 1px);
+        --effect-bg: var(--circle-bg);
+        --effect-border-radius: 1px;
+        --effect-transition: all 0.2s ease-in-out;
+
+        margin-top: 12px;
+        margin-left: 160px;
+      }
+
+      .switch input {
+        display: none;
+      }
+
+      .switch {
+        display: inline-block;
+      }
+
+      .switch svg {
+        -webkit-transition: var(--icon-transition);
+        -o-transition: var(--icon-transition);
+        transition: var(--icon-transition);
+        position: absolute;
+        height: auto;
+      }
+
+      .switch .checkmark {
+        width: var(--icon-checkmark-size);
+        color: var(--icon-checkmark-color);
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+      }
+
+      .switch .cross {
+        width: var(--icon-cross-size);
+        color: var(--icon-cross-color);
+      }
+
+      .slider {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: var(--switch-width);
+        height: var(--switch-height);
+        background: var(--switch-bg);
+        border-radius: 999px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+        -webkit-transition: var(--switch-transition);
+        -o-transition: var(--switch-transition);
+        transition: var(--switch-transition);
+        cursor: pointer;
+      }
+
+      .circle {
+        width: var(--circle-diameter);
+        height: var(--circle-diameter);
+        background: var(--circle-bg);
+        border-radius: inherit;
+        -webkit-box-shadow: var(--circle-shadow);
+        box-shadow: var(--circle-shadow);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-transition: var(--circle-transition);
+        -o-transition: var(--circle-transition);
+        transition: var(--circle-transition);
+        z-index: 1;
+        position: absolute;
+        left: var(--switch-offset);
+      }
+
+      .slider::before {
+        content: "";
+        position: absolute;
+        width: var(--effect-width);
+        height: var(--effect-height);
+        left: calc(var(--switch-offset) + (var(--effect-width) / 2));
+        background: var(--effect-bg);
+        border-radius: var(--effect-border-radius);
+        -webkit-transition: var(--effect-transition);
+        -o-transition: var(--effect-transition);
+        transition: var(--effect-transition);
+      }
+
+      /* actions */
+
+      .switch input:checked + .slider {
+        background: var(--switch-checked-bg);
+      }
+
+      .switch input:checked + .slider .checkmark {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+
+      .switch input:checked + .slider .cross {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+      }
+
+      .switch input:checked + .slider::before {
+        left: calc(
+          100% - var(--effect-width) - (var(--effect-width) / 2) -
+            var(--switch-offset)
+        );
+      }
+
+      .switch input:checked + .slider .circle {
+        left: calc(100% - var(--circle-diameter) - var(--switch-offset));
+        -webkit-box-shadow: var(--circle-checked-shadow);
+        box-shadow: var(--circle-checked-shadow);
+      }
+
+
+      /* insideinput */
+    
+    
+     form {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+    
+    #new_task_input {
+        min-width: 250px;
+        margin-bottom: 0;
+        font-size: 20px;
+        color: white;
+        background-color: transparent;
+        border: none;
+        margin-left: 7px;
+        border-bottom: 1px rgba(255, 255, 255, 0.267) solid;
+    }
+    
+    #new_task_input::placeholder {
+        color: rgba(255, 255, 255, 0.589);
+        font-size: 20px;
+        font-family: "Times New Roman";
+    }
+    
+     #new_task_input_btn {
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        background-image: url("./new.svg");
+        background-repeat: no-repeat;
+        background-size: 80%;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    #new_task_input {
+      margin-right: 20px;
+  }

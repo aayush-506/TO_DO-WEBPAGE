@@ -1,15 +1,25 @@
-// let ai= document.getElementsByClassName("accordion")
-// ai.addEventListener("click",function(){
-//   document.getElementsByClassName("accordion").innerHTML =
-// })
+const DateinputBox = document.getElementById("enterDate");
+const jsAccordion = document.getElementById("jsAccordion");
+const panel = document.getElementById("panel");
 
-// document.getElementById("acc0").addEventListener("click", function() {
-//   document.getElementById("acc0").innerHTML = ` <h4> <input type="checkbox">Today Tasks:</h5>`;
-// });
+function addDate(){
+  if(DateinputBox.value ===''){
+    alert("Please Enter the Date of the Task");
+  }
+  else{
+      let button = document.createElement("Button");
+      button.innerHTML = DateinputBox.value;
+      button.classList.add("accordion");
+      jsAccordion.appendChild(button);
+  }
+  DateinputBox.value = "";
+}
 
-
-
-
+button.addEventListener("click",function(){
+  let ul_pannel = document.createElement("ul");
+  ul_pannel.classList.add("list-container");
+  panel.appendChild(ul_pannel);
+})
 
 
 
@@ -34,8 +44,3 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-
-
-document.getElementById("acc0").addEventListener("click", function() {
-  document.getElementById("acc0").innerHTML = ` <h4> <input type="checkbox">Today Tasks:</h5>`;
-});
