@@ -9,19 +9,20 @@
   <body>
     <div class="main">
       <div class="write">
-        <h1>To Do list</h1>
+        <h1 data-text="To Do list">To Do list</h1>
+        <h3>Simple To Do List for your Daily usage.....</h3>
       </div>
 
       <div class="content">
         <div class="items">
-          <h2>To Do <img src="images/setting (1).png" /></h2>
+          <h2>To Do <img src="images/new_set.png" /></h2>
 
           <div class="row">
             <input
               type="text"
               name=""
               id="enterDate"
-              placeholder="Enter your text"
+              placeholder="Enter the Date of Task"
             />
             <button id="Add" onclick="addDate()">Add</button>
           </div>
@@ -227,27 +228,7 @@
         </div>
       </div>
     </div>
-<!-- 
-    <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
 
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-          this.classList.toggle("active");
-
-          /* Toggle between hiding and showing the active panel */
-          var panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-      }
-    </script> -->
     <script src="script.js"></script>
   </body>
 </html>
