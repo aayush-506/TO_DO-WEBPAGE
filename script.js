@@ -43,9 +43,7 @@ function addDate() {
       panel.style.display = panel.style.display === "block" ? "none" : "block";
     });
 
-    let inline = document.createElement("div");
-    inline.classList.add("inline");
-    li_div.appendChild(inline);
+    
 
     DateinputBox.value = "";
 
@@ -54,6 +52,11 @@ function addDate() {
       if (task_input.value === "") {
         alert("Please Enter the Task before pressing ADD");
       } else {
+
+        let inline = document.createElement("div");
+    inline.classList.add("inline");
+    ul.appendChild(inline);
+
         let bullet_icon = document.createElement("div");
         bullet_icon.classList.add("bullet-icon");
         inline.appendChild(bullet_icon);
@@ -63,7 +66,7 @@ function addDate() {
         inline.appendChild(task);
 
         let li_checked = document.createElement("li");
-        li_checked.classList.add("checked");
+        li_checked.classList.add("unchecked");
         task.appendChild(li_checked);
         li_checked.innerHTML = task_input.value;
 
@@ -144,10 +147,10 @@ function addDate() {
           "http://www.w3.org/2000/svg",
           "path"
         );
-        pathElement.setAttribute("class", "");
-        pathElement.setAttribute("data-original", "#000000");
-        pathElement.setAttribute("fill", "currentColor");
-        pathElement.setAttribute(
+        path2Element.setAttribute("class", "");
+        path2Element.setAttribute("data-original", "#000000");
+        path2Element.setAttribute("fill", "currentColor");
+        path2Element.setAttribute(
           "d",
           "M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
         );
@@ -155,9 +158,13 @@ function addDate() {
         svgElement.appendChild(g2Element);        
         circle.appendChild(svgElement); 
 
-                  //  have to sart from here  //
-
+          switchInput.addEventListener('change', function() {
+            li_checked.classList.toggle('checked');
+            li_checked.classList.toggle('unchecked');
+        });
+      
         task_input.value = "";
+     
       }
     });
   }

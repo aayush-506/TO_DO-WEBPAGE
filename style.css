@@ -20,6 +20,14 @@ body{
     align-items: center;
  
 }
+
+.task-container {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  flex-wrap: wrap;
+}
+
 .content{
     height: auto;
     width: 30vw;
@@ -31,9 +39,6 @@ body{
 .items{
     margin-left: 2vw;
 }
-/* button{
-  color: white;
-} */
 
 .content img{
     height: 5vh;
@@ -91,11 +96,14 @@ body{
     cursor: pointer;
     position: relative;
     color: white;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 
 .inline{
     background-color: #282828;
     display: flex;
+    /* align-items: center;  */
 }
 
 
@@ -107,7 +115,10 @@ body{
     margin-top: 13px;
     background-color: red;
     border-radius: 35px;
+    margin-right: 6px;
 }
+
+
 
 .row{
     display: flex;
@@ -153,9 +164,25 @@ body{
     
 }
 
+.li-div {
+  width: 100%; 
+  flex-direction: column;
+}
+
+.task {
+  flex-grow: 1; 
+  word-wrap: break-word; 
+  word-break: break-all; 
+  white-space: normal;
+}
+
 ul li.checked{
   color: #555;
   text-decoration:line-through ;
+}
+
+li.task div {
+  word-break: break-word; 
 }
 
 
@@ -319,7 +346,12 @@ ul li.checked{
         display: flex;
         flex-direction: row;
         align-content: center;
+       
     }
+
+    li.task div {
+      word-break: break-word; /* Allow breaking of long words */
+  }
     
     .new_task_input {
         min-width: 250px;
