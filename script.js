@@ -43,8 +43,6 @@ function addDate() {
       panel.style.display = panel.style.display === "block" ? "none" : "block";
     });
 
-    
-
     DateinputBox.value = "";
 
     form.addEventListener("submit", function (event) {
@@ -52,10 +50,9 @@ function addDate() {
       if (task_input.value === "") {
         alert("Please Enter the Task before adding");
       } else {
-
         let inline = document.createElement("div");
-    inline.classList.add("inline");
-    ul.appendChild(inline);
+        inline.classList.add("inline");
+        ul.appendChild(inline);
 
         let bullet_icon = document.createElement("div");
         bullet_icon.classList.add("bullet-icon");
@@ -70,11 +67,15 @@ function addDate() {
         task.appendChild(li_checked);
         li_checked.innerHTML = task_input.value;
 
+        let switch_div = document.createElement("div");
+        switch_div.classList.add("switch_div");
+        inline.appendChild(switch_div);
+
         ///////////////////////switch//////
 
         let switchLabel = document.createElement("label");
         switchLabel.classList.add("switch");
-        inline.appendChild(switchLabel); 
+        switch_div.appendChild(switchLabel);
 
         let switchInput = document.createElement("input");
         switchInput.type = "checkbox";
@@ -82,7 +83,7 @@ function addDate() {
 
         let slider = document.createElement("div");
         slider.classList.add("slider");
-        switchLabel.appendChild(slider); 
+        switchLabel.appendChild(slider);
 
         let circle = document.createElement("div");
         circle.classList.add("circle");
@@ -122,7 +123,6 @@ function addDate() {
         gElement.appendChild(pathElement);
         crossSVG.appendChild(gElement);
 
-        
         let svgElement = document.createElementNS(
           "http://www.w3.org/2000/svg",
           "svg"
@@ -155,20 +155,16 @@ function addDate() {
           "M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
         );
         g2Element.appendChild(path2Element);
-        svgElement.appendChild(g2Element);        
-        circle.appendChild(svgElement); 
+        svgElement.appendChild(g2Element);
+        circle.appendChild(svgElement);
 
-          switchInput.addEventListener('change', function() {
-            li_checked.classList.toggle('checked');
-            li_checked.classList.toggle('unchecked');
+        switchInput.addEventListener("change", function () {
+          li_checked.classList.toggle("checked");
+          li_checked.classList.toggle("unchecked");
         });
-      
+
         task_input.value = "";
-     
       }
     });
   }
 }
-
-
-
